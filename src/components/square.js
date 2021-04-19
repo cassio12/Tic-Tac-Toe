@@ -1,11 +1,20 @@
+// import { render } from '@testing-library/react';/
+import React from 'react';
 import '../App.css';
 
-function Square() {
-      return (
-        <button className="square">
-          {/* TODO */}
-        </button>
-      );
-    }
+function Square (props) {
+  let gambling = () => {
+    props.onClick()
+  }
+
+  return (
+    <button 
+    className="square" 
+    onClick={gambling}>
+      {props.value}
+    </button>
+  );
+  
+}
 
 export default Square;
